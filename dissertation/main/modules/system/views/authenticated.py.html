@@ -1,0 +1,20 @@
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
+from django.views.generic import CreateView
+
+from modules.blog.forms.authenticated import UserRegisterForm
+
+
+class RegisterCreateView(SuccessMessageMixin, CreateView):
+    """
+    Представление регистрации на сайте с формой регистрации
+    """
+    form_class = UserRegisterForm
+    success_url = reverse_lazy('home')
+    template_name = 'modules/system/authenticated/register.html'
+    success_message = 'Вы успешно зарегистрировались. Можете войти на сайт!'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Регистрация на сайте'
+        return context
