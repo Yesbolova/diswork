@@ -90,6 +90,28 @@ def informatiki (request):
     return  render (request, 'main/informatiki.html')
 def olimpiada_esepteri (request):
     return  render (request, 'main/olimpiada_esepteri.html')
+def birolshemdimassiv (request):
+    return  render (request, 'main/birolshemdimassiv.html')
+def ekiolshemdimassiv (request):
+    return  render (request, 'main/ekiolshemdimassiv.html')
+def trassirovka (request):
+    return  render (request, 'main/trassirovka.html')
+def suryptau (request):
+    return  render (request, 'main/suryptau.html')
+def orynauystyru (request):
+    return  render (request, 'main/orynauystyru.html')
+def zhoyujanekiristiru (request):
+    return  render (request, 'main/zhoyujanekiristiru.html')
+def bagalau (request):
+    return  render (request, 'main/bagalau.html')
+def maksat (request):
+    return  render (request, 'main/maksat.html')
+def pygame (request):
+    return  render (request, 'main/pygame.html')
+def task09 (request):
+    return  render (request, 'main/task09.html')
+def string (request):
+    return  render (request, 'main/string.html')
 
 
 
